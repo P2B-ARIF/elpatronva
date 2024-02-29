@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	/* font-family: "Oswald", sans-serif; */
+}
+
+:root {
+	--primary: #2d2723;
+	--secondary: #c3a27c;
+	--soil: #ba9b77;
+	/* --lightYellow: #f8e4c4; */
+	--lightYellow: #faf1e3;
+	--blackColor: #171412;
+	--whiteColor: #e2e1e1;
+}
+
+/* Carousel.css */
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.overlay-container {
+	position: relative;
+}
+
+.overlay-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 2rem;
+	transform: translate(-50%, -50%);
+	color: var(--whiteColor);
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.603);
+}
+
+.overlayLight {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: end;
+	row-gap: 2rem;
+	transform: translate(-50%, -50%);
+	color: var(--whiteColor);
+	text-align: center;
+	background-color: #00000079;
+}
+
+.video-responsive iframe {
+	border-radius: 1rem;
+}
+
+.bg_review {
+	background-image: url("./assets/patron1.jpg");
+	width: full;
+	height: 700px;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+/* .bg_review::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #1714126b;
+	z-index: 60;
+
+} */
+
+.hour::after {
+	content: "";
+	position: absolute;
+	top: -20px;
+	left: 30px;
+	width: 86%;
+	background-color: #c3a27c;
+	z-index: -1;
+	height: 110%;
+	border-radius: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+	.hour::after {
+		content: "";
+		position: absolute;
+		top: -20px;
+		left: 30px;
+		width: 80%;
+		background-color: #c3a27c;
+		z-index: -1;
+		height: 110%;
+		border-radius: 0.5rem;
+	}
+}
